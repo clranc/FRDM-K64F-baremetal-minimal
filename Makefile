@@ -6,6 +6,7 @@ TOOLCHAIN=/opt/gcc-arm-none-eabi-4_9-2015q2/bin
 PREFIX=arm-none-eabi-
 CC=$(PREFIX)gcc
 LD=$(PREFIX)gcc
+DB=$(PREFIX)gdb
 AS=$(PREFIX)as
 OBJCOPY=$(PREFIX)objcopy
 SIZE=$(PREFIX)size
@@ -23,6 +24,9 @@ INCLUDE=-I./includes/
 CFLAGS= -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -g3 \
 	 -Xlinker --gc-sections -specs=nano.specs -specs=nosys.specs
 LDFLAGS= $(ARCHFLAGS) -T "MK64FN1M0xxx12_flash.ld" -L"./" -Wl,-Map,$(TARGET).map
+
+#GNU ARM GDB Flags
+DBFLAGS=--batch --command=gdbinit
 
 #Output file
 TARGET=main
@@ -54,4 +58,7 @@ size:
 
 #%.srec: %.elf
 #	$(OBJCOPY) -O srec $< $@
+
+flash:
+	sudo $(DB) $(DBFLAGS) 
 
