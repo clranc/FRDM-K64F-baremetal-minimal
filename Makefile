@@ -3,7 +3,7 @@
 
 #Toolchain and Path Configuration
 TOOLCHAIN=/opt/gcc-arm-none-eabi-4_9-2015q2/bin
-PREFIX=$(TOOLCHAIN)/arm-none-eabi-
+PREFIX=arm-none-eabi-
 CC=$(PREFIX)gcc
 LD=$(PREFIX)gcc
 AS=$(PREFIX)as
