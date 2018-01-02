@@ -48,7 +48,7 @@ cd FRDM-K64F-baremetal-minimal
 
 make
 
-4) flash
+5) flash
 
 make flash
 
