@@ -34,7 +34,7 @@ option A you can build it from source:
 
 option B check to see if your package manager has openocd and install
 
-2) Clone the repository
+3) Clone the repository
 
 https://github.com/clranc/FRDM-K64F-baremetal-minimal.git
 
@@ -42,13 +42,13 @@ original repo without my flash additions:
 
   https://github.com/ferlzc/FRDM-K64F-baremetal-minimal.git
 
-3) Build a basic project
+4) Build a basic project
 
 cd FRDM-K64F-baremetal-minimal
 
 make
 
-4) flash
+5) flash
 
 make flash
 
