@@ -2,7 +2,6 @@
 #25/09/2015
 
 #Toolchain and Path Configuration
-#TOOLCHAIN=/opt/gcc-arm-none-eabi-7-2017-q4-major/bin/
 TOOLCHAIN=$(shell whereis arm-none-eabi-gcc | sed -e "s/arm-none-eabi-gcc: //" -e "s/arm-none-eabi-gcc//")
 PREFIX=$(TOOLCHAIN)arm-none-eabi-
 CC=$(PREFIX)gcc
