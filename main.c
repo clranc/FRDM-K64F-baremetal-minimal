@@ -7,14 +7,14 @@ void delay(int time);
 
 int main(void)
 {
-	int i = 0;
-	led_blue_init();
-	led_blue_toogle();
+    int i = 0;
+    led_blue_init();
+    led_blue_toogle();
 
     for (;;) {
 
-	led_blue_toogle();
-    	delay(2000);
+    led_blue_toogle();
+        delay(2000);
         i++;
     }
     return 0;
@@ -22,6 +22,6 @@ int main(void)
 
 void delay(int time)
 {
-	int i = 0;
-	for (i = time*1000 ; i !=0; i--) { }
+    int i = 0;
+    for (i = time*1000 ; i !=0; i--) { }
 }

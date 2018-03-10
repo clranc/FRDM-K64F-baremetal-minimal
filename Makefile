@@ -2,8 +2,9 @@
 #25/09/2015
 
 #Toolchain and Path Configuration
-TOOLCHAIN=/opt/gcc-arm-none-eabi-4_9-2015q2/bin
-PREFIX=arm-none-eabi-
+#TOOLCHAIN=/opt/gcc-arm-none-eabi-7-2017-q4-major/bin/
+TOOLCHAIN=$(shell whereis arm-none-eabi-gcc | sed -e "s/arm-none-eabi-gcc: //" -e "s/arm-none-eabi-gcc//")
+PREFIX=$(TOOLCHAIN)arm-none-eabi-
 CC=$(PREFIX)gcc
 LD=$(PREFIX)gcc
 DB=$(PREFIX)gdb
@@ -34,16 +35,22 @@ TARGET=main
 #Makefile rules
 all: build bin size
 build: elf
+builds: assem
 elf: $(TARGET).elf
 bin: $(TARGET).bin
+assem: $(TARGET).s
 #srec: $(TARGET).srec
 
 clean:
 	$(RM) $(TARGET).bin $(TARGET).srec $(TARGET).elf $(TARGET).map $(OBJ) $(ASOBJ)
+	echo $(TEST)
 
 #Compiling each source file
 %.o: %.c 
 	$(CC) -c $(ARCHFLAGS) $(CFLAGS) $(INCLUDE) -o $@ $<
+
+%.s: %.c
+	$(CC) -c $(ARCHFLAGS) $(CFLAGS) $(INCLUDE) -S -o $@ $<
 
 #Linking project
 $(TARGET).elf: $(OBJ) $(ASOBJ)

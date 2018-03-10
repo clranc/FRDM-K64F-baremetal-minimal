@@ -1,27 +1,2 @@
-Info : CMSIS-DAP: SWD  Supported
-Info : CMSIS-DAP: Interface Initialised (SWD)
-Info : CMSIS-DAP: FW Version = 1.0
-Info : SWCLK/TCK = 0 SWDIO/TMS = 1 TDI = 0 TDO = 0 nTRST = 0 nRESET = 1
-Info : CMSIS-DAP: Interface ready
-Info : clock speed 1000 kHz
-Info : SWD DPIDR 0x2ba01477
-Info : k64f.cpu: hardware has 6 breakpoints, 4 watchpoints
-Info : MDM: Chip is unsecured. Continuing.
-Info : accepting 'gdb' connection from pipe
-target halted due to debug-request, current mode: Thread 
-xPSR: 0x21000000 pc: 0x000008fa msp: 0x2002ffd8
-Info : Probing flash info for bank 0
-Info : MDM: Chip is unsecured. Continuing.
-target halted due to debug-request, current mode: Thread 
-xPSR: 0x01000000 pc: 0x000004e4 msp: 0x20030000
-Warn : No RTOS could be auto-detected!
-Warn : No RTOS could be auto-detected!
-Info : MDM: Chip is unsecured. Continuing.
-target halted due to debug-request, current mode: Thread 
-xPSR: 0x01000000 pc: 0x000004e4 msp: 0x20030000
-Warn : Flash Configuration Field written.
-Warn : Reset or power off the device to make settings effective.
-Info : MDM: Chip is unsecured. Continuing.
-target halted due to debug-request, current mode: Thread 
-xPSR: 0x01000000 pc: 0x000004e4 msp: 0x20030000
-Info : dropped 'gdb' connection
+Error: unable to find CMSIS-DAP device
+
